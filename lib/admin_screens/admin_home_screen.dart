@@ -282,24 +282,29 @@ class _AdminHomeScreenState extends State<AdminHomeScreen> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 14),
-                Text(
-                  title,
-                  style: const TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black87,
-                  ),
-                ),
-                const SizedBox(height: 6),
-                Text(
-                  description,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.grey[600],
-                  ),
-                ),
+                FittedBox(
+  fit: BoxFit.scaleDown,
+  child: Text(
+    title,
+    style: const TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.bold,
+      color: Colors.black87,
+    ),
+    textAlign: TextAlign.center,
+  ),
+),
+const SizedBox(height: 6),
+Text(
+  description,
+  textAlign: TextAlign.center,
+  maxLines: 2,
+  overflow: TextOverflow.ellipsis,
+  style: TextStyle(
+    fontSize: 13,
+    color: Colors.grey[600],
+  ),
+),
               ],
             ),
           ),

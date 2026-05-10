@@ -284,7 +284,7 @@ void _showErrorSnackbar(String message) {
                 errorText: phoneError
               ),
               keyboardType: TextInputType.phone,
-              maxLength: 10,
+              maxLength: 11,
               inputFormatters: [
                 FilteringTextInputFormatter.digitsOnly,
               ],

@@ -146,21 +146,24 @@ class _TicketScreenState extends State<TicketScreen> {
                   ),
                   const SizedBox(height: 20),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Icon(Icons.person,
-                          size: 20, color: Colors.blueAccent),
-                      const SizedBox(width: 8),
-                      Text(
-                        userName,
-                        style: const TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.blueAccent),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
-                  ),
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    const Icon(Icons.person, size: 20, color: Colors.blueAccent),
+    const SizedBox(width: 8),
+    Flexible(
+      child: Text(
+        userName,
+        style: const TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: Colors.blueAccent),
+        textAlign: TextAlign.center,
+        softWrap: true,              // ← allows line breaks
+        overflow: TextOverflow.visible, // ← lets text wrap instead of clipping
+      ),
+    ),
+  ],
+),
                   const SizedBox(height: 10),
                   Container(
                     decoration: BoxDecoration(
