@@ -120,10 +120,10 @@ class _AdminHomeScreenState extends State<AdminHomeScreen> {
           child: Text('Admin Dashboard'),
         ),
         actions: [
-          IconButton(
-            icon: const Icon(Icons.account_circle),
-            onPressed: () {},
-          ),
+          // IconButton(
+          //   icon: const Icon(Icons.account_circle),
+          //   onPressed: () {},
+          // ),
           IconButton(
             icon: const Icon(Icons.logout),
             onPressed: logout,
